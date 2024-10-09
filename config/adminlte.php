@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'Livraria',
-    'title_prefix' => 'app',
-    'title_postfix' => 'jef',
+    'title' => 'AdminLTE 3',
+    'title_prefix' => '',
+    'title_postfix' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>App</b>Livraria',
-    'logo_img' => '/img/logo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3 bg-white',
+    'logo' => '<b>Admin</b>LTE',
+    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Aplicativo da Livraria',
+    'logo_img_alt' => 'Admin Logo',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,12 +171,12 @@ return [
     |
     */
 
-    'classes_auth_card' => 'bg-gradient-dark',
+    'classes_auth_card' => 'card-outline card-primary',
     'classes_auth_header' => '',
-    'classes_auth_body' => 'bg-gradient-dark',
-    'classes_auth_footer' => 'text-center',
-    'classes_auth_icon' => 'fa-fw text-light',
-    'classes_auth_btn' => 'btn-flat btn-light',
+    'classes_auth_body' => '',
+    'classes_auth_footer' => '',
+    'classes_auth_icon' => '',
+    'classes_auth_btn' => 'btn-flat btn-primary',
 
     /*
     |--------------------------------------------------------------------------
@@ -308,26 +308,26 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'procurar',
+            'text' => 'search',
         ],
         [
-            'text' => 'Livros',
-            'url' => 'livros',
-            'icon' => 'fas fa-book-open',
+            'text' => 'blog',
+            'url' => 'admin/blog',
+            'can' => 'manage-blog',
         ],
         [
-            'text' => 'Categorias',
-            'url' => 'categorias',
+            'text' => 'pages',
+            'url' => 'admin/pages',
             'icon' => 'far fa-fw fa-file',
-
-        ],
-
-        [
-            'text' => 'Autores',
-            'url' => 'autores',
-            'icon' => 'fas fa-fw fa-user',
+            'label' => 4,
+            'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
+        [
+            'text' => 'profile',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         [
             'text' => 'change_password',
             'url' => 'admin/settings',
@@ -424,7 +424,6 @@ return [
     */
 
     'plugins' => [
-
         'Datatables' => [
             'active' => false,
             'files' => [
